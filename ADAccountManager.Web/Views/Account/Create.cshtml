@@ -1,0 +1,57 @@
+﻿@using ADAccountManage;
+@using ADAccountManage;
+@using ADAccountManage.Model;
+
+@model ADUser
+@section HeaderSection
+{
+    <script src="@Url.Content("~/Scripts/jquery.validate.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("form").validate();
+        });
+    </script>
+}
+
+@{
+    Html.EnableClientValidation();
+}
+@using (Html.BeginForm())
+{
+    <ul class="details">
+        @if (ViewBag.IsCreate == true)
+        {
+            <li>@Html.LabelFor(f => f.Name) @Html.TextBoxFor(f => f.Name) <span class="field-required">*</span>
+                @Html.ValidationMessageFor(f => f.Name)
+            </li>
+            <li>@Html.LabelFor(f => f.SamAccountName) @Html.TextBoxFor(f => f.SamAccountName) <span class="field-required">*</span>
+                @Html.ValidationMessageFor(f => f.SamAccountName)
+            </li>
+            <li>@Html.LabelFor(f => f.Password) @Html.PasswordFor(f => f.Password) <span class="field-required">*</span>
+                @Html.ValidationMessageFor(f => f.Password)
+            </li>
+        }
+        else
+        {
+            <li>@Html.LabelFor(f => f.Name) @Model.Name </li>
+            <li>@Html.LabelFor(f => f.SamAccountName) @Model.SamAccountName</li>
+        }
+        <li>@Html.LabelFor(f => f.Surname) @Html.TextBoxFor(f => f.Surname)</li>
+        <li>@Html.LabelFor(f => f.MiddleName) @Html.TextBoxFor(f => f.MiddleName)</li>
+        <li>@Html.LabelFor(f => f.GivenName) @Html.TextBoxFor(f => f.GivenName)</li>
+        <li>@Html.LabelFor(f => f.DisplayName) @Html.TextBoxFor(f => f.DisplayName)</li>
+        <li>@Html.LabelFor(f => f.Description) @Html.TextAreaFor(f => f.Description)</li>
+        <li>@Html.LabelFor(f => f.EmailAddress) @Html.TextBoxFor(f => f.EmailAddress)</li>
+        <li>@Html.LabelFor(f => f.SecrecyQuestion) @Html.DropDownListFor(f => f.SecrecyQuestion, ADAccountManage.Web.HtmlExtensions.LoadSecrecyQuestion(), "<--请选择一个密保问题-->")
+            <span class="field-required">*</span>
+            @Html.ValidationMessageFor(f => f.SecrecyQuestion)
+        </li>
+        <li>@Html.LabelFor(f => f.SecrecyAnswer) @Html.TextBoxFor(f => f.SecrecyAnswer)
+            <span class="field-required">*</span>@Html.ValidationMessageFor(f => f.SecrecyAnswer)</li>
+        <li>
+            <label></label>
+            <input type="submit" /></li>
+    </ul>
+}
+<div class="links">@Html.ActionLink("<< 返回首页", "Index", "Home") | @Html.ActionLink("修改密码", "ChangePassword")</div>

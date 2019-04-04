@@ -1,0 +1,27 @@
+﻿@model ADAccountManage.Model.ADUser
+@using System.ComponentModel;
+@{
+    ViewBag.Title = "查看用户资料";
+}
+@if (this.Model != null)
+{
+    var properties = this.Model.GetType().GetProperties(System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.Public);
+    <ul class="details">
+        @foreach (var prop in properties)
+        {
+            var expandNames = new string[] {"Password", "ConfirmPassword" };
+            if (!expandNames.Contains(prop.Name, StringComparer.CurrentCultureIgnoreCase))
+            {
+                var captionName = prop.Name;
+                var propAttr = prop.GetCustomAttributes(typeof(DisplayNameAttribute), false);
+                if (propAttr.Length > 0)
+                { captionName = ((DisplayNameAttribute)propAttr[0]).DisplayName; }
+            <li><span class="caption">@captionName</span>@prop.GetValue(this.Model, null)</li>
+            }
+        }
+    </ul>
+    <div class="links">@Html.ActionLink("<< 返回首页", "Index", "Home") 
+        | @Html.ActionLink("编辑资料", "Edit")
+        | @Html.ActionLink("修改密码", "ChangePassword")
+    </div>
+}

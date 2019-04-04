@@ -1,0 +1,59 @@
+﻿html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, main, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; }
+body { font: 12px/1.666em Arial, sans-serif, Tahoma; color: #252525; background-color: #fff; }
+header, footer, nav, section { display: block; max-width: 1366px; margin: 0 auto; text-align: left; padding: 0; clear: both; }
+ul, ol, li { list-style: none; }
+header { border-bottom: 1px solid #ccc; background: #f8f8f8; display: none; }
+section { }
+footer { border-top: 1px solid #ccc; margin-top: 20px; color: #ccc; display: none; }
+
+
+header h1, header h2 { display: inline; }
+header h1 { line-height: 2em; margin-right: 20px; font-size: 2.66em; }
+header h2 { font-weight: normal; font-size: 1.33em; }
+header div.up { float: right; }
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+
+fieldset { border: 1px solid #ddd; padding: 0 1.4em 1.4em 1.4em; margin: 0 0 1.5em 0; }
+legend { font-size: 1.2em; font-weight: bold; }
+textarea { min-height: 75px; }
+.editor-label { margin: 1em 0 0 0; }
+.editor-field { margin: 0.5em 0 0 0; }
+
+.message { padding: 5px 10px; width: 768px; margin: 10px auto; color: #0c7a1b; background-color: #e0f8de; border: 1px solid #0c7a1b; }
+.error { padding: 5px 10px; margin: 10px auto; width: 768px; overflow: auto; color: #ff0000; border: 1px solid #ff0000; background-color: #ffeeee; }
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error, .field-required { color: #ff0000; }
+.field-validation-valid { display: none; }
+.input-validation-error { border: 1px solid #ff0000; background-color: #ffeeee; }
+.validation-summary-errors { font-weight: bold; color: #ff0000; }
+.validation-summary-valid { display: none; }
+
+
+.list-table { border: 0; width: 100%; empty-cells: show; padding: 0; }
+.list-table thead td { background: #eee; border-bottom: 1px solid #ccc; }
+.list-table td { border-bottom: 1px solid #eee; padding: 3px 5px; }
+.list-table tr:hover { background: #eee; }
+
+.block { width: 533px; height: 448px; margin: 120px auto 0; padding: 0; background: url(AccountImages/block-bg.png) top left no-repeat; }
+.block > h2 { font-size: 48px; color: #369; text-align: center; line-height: 48px; height: 56px; margin: 0; padding: 100px 0 0; }
+.forms { margin: 0 40px; }
+.forms li { margin: 18px 0; padding: 0 30px; height: 65px; line-height: 65px; background: url(AccountImages/icon.png) 0 -110px no-repeat; }
+.forms.cpwd li { background-position: 0 -200px; height: 55px; line-height: 55px; margin: 10px 0; }
+.forms li > i { background: url(AccountImages/icon.png); width: 20px; height: 20px; display: inline-block; line-height: 65px; }
+.forms li#li-name > i { background-position: 0 0; }
+.forms li#li-pwd > i { background-position: 0 -25px; }
+.forms .caption, .forms label { display: inline-block; min-width: 50px; font-size: 14px; font-weight: bold; color: #aaa; text-align: left; margin-right: 10px; }
+.forms.cpwd .caption, .forms.cpwd label { min-width: 75px; }
+.forms input { border-width: 0; background-color: transparent; width: 300px; height: 36px; }
+.forms input[type=text], .forms input[type=password] { padding: 3px; font-size: 20px; }
+
+.forms li.botton { background: none; padding: 0; height: 50px; line-height: 50px; }
+.forms li.botton input { background: url(AccountImages/login-bottom.png) center center no-repeat;  cursor: pointer; padding: 0; width: 124px; height: 50px; text-align: center; text-indent: -9999px; }
+.forms.cpwd li.bottom input { background-image: url(AccountImages/login-bottom.png); }
+
+.links { margin: 0; margin-left: 30px; color: #fff; }
+.links a { color: #fff; font-size: 14px; text-decoration: none; margin-left: 20px; }

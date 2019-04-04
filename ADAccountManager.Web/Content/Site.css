@@ -1,0 +1,50 @@
+﻿html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, main, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; }
+body { font: 12px/1.666em Arial, sans-serif, Tahoma; color: #252525; background-color: #fff; }
+header, footer, nav, section { display: block; max-width: 1366px; margin: 0 auto; text-align: left; padding: 0; clear: both; }
+ul, ol, li { list-style: none; }
+header { border-bottom: 1px solid #ccc; padding: 10px; background: #f8f8f8; }
+section { padding: 10px; }
+footer { border-top: 1px solid #ccc; margin-top: 20px; color: #ccc; }
+
+
+header h1, header h2 { display: inline; }
+header h1 { }
+header h1 a { background: url(images/logo.png) center center no-repeat; display: inline-block; width: 328px; height: 66px; text-indent: -9999px; }
+header div.up { float: right; }
+
+section h2 { font-size: 2.769em; line-height: 1em; padding: 5px 10px; }
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+
+fieldset { border: 1px solid #ddd; padding: 0 1.4em 1.4em 1.4em; margin: 0 0 1.5em 0; }
+legend { font-size: 1.2em; font-weight: bold; }
+textarea { min-height: 75px; }
+.editor-label { margin: 1em 0 0 0; }
+.editor-field { margin: 0.5em 0 0 0; }
+
+.message { padding: 5px 10px; width: 70%; color: #0c7a1b; background-color: #e0f8de; border: 1px solid #0c7a1b; }
+.error { padding: 5px 10px; margin: 10px 0; width: 70%; overflow: auto; color: #ff0000; border: 1px solid #ff0000; background-color: #ffeeee; }
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error, .field-required { color: #ff0000; }
+.field-validation-valid { display: none; }
+.input-validation-error { border: 1px solid #ff0000; background-color: #ffeeee; }
+.validation-summary-errors { font-weight: bold; color: #ff0000; }
+.validation-summary-valid { display: none; }
+
+
+.list-table { border: 0; width: 100%; empty-cells: show; padding: 0; }
+.list-table thead td { background: #eee; border-bottom: 1px solid #ccc; }
+.list-table td { border-bottom: 1px solid #eee; padding: 3px 5px; }
+.list-table tr:hover { background: #eee; }
+
+.details { }
+.details li { margin: 3px 0; }
+.details .caption, .details label { display: inline-block; min-width: 150px; color: #666; text-align: right; margin-right: 10px; }
+.details input[type=text], .details input[type=password], .details textarea, .details select { width: 300px; border: 1px solid #aaa; padding: 3px; }
+.details input[type=text]:hover, .details input[type=password]:hover, .details textarea:hover { border: 1px solid #666; }
+.details input[type=text]:focus, .details input[type=password]:focus, .details textarea:hover { border: 1px solid #0079ce; }
+
+.links { margin: 20px 0 0; }

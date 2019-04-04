@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "用户登录";
+    Layout = "~/Views/Shared/_LayoutAccount.cshtml";
+}
+@section HeaderSection
+{
+    <script src="@Url.Content("~/Scripts/jquery.validate.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("form").validate();
+        });
+    </script>
+}
+
+@{
+    Html.EnableClientValidation();
+}
+
+<div class="block">
+    <h2>用户登录</h2>
+    @using (Html.BeginForm())
+    {
+        <ul class="forms">
+            <li id="li-name"><label for="name">帐户名 @Html.ValidationMessage("name", "*")</label>@Html.TextBox("name")<i></i></li>
+            <li id="li-pwd"><label for="password">密码 @Html.ValidationMessage("name", "*")</label>@Html.Password("password")<i></i></li>
+            <li class="botton"><input type="submit" /> <input type="checkbox" id="isCookiePersistent" name="isCookiePersistent" style="display: none;" />
+                <span class="links">@Html.ActionLink("忘记密码？", "Index", "Home", new { area = "" }, null)
+                    @Html.ActionLink("返回首页", "Index", "Home", new { area = "" }, null)
+                </span></li>
+        </ul>
+    }
+</div>

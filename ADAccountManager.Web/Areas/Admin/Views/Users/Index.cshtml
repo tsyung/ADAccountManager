@@ -1,0 +1,41 @@
+﻿@model IList<ADAccountManage.Model.ADUser>
+@{
+    ViewBag.Title = "所有用户";
+}
+
+@Html.ActionLink("+ 添加新用户", "Create")
+<table class="list-table" cellpadding="0" cellspacing="0" border="0">
+    <thead>
+        <tr>
+            <td>Login Name</td>
+            <td>Display Name</td>
+            <td>User Name</td>
+            <td>Description</td>
+            <td>Email</td>
+            <td>DN</td>
+            <td>Last Logon</td>
+            <td>Action</td>
+        </tr>
+    </thead>
+    @foreach (var user in this.Model)
+    {
+        <tr>
+            <td>@user.SamAccountName</td>
+            <td>@user.DisplayName</td>
+            <td>@user.GivenName @user.MiddleName @user.Surname</td>
+            <td>@user.Description</td>
+            <td>@user.EmailAddress</td>
+            <td>@user.DistinguishedName</td>
+            <td>@user.LastLogon</td>
+            <td>@Html.ActionLink("Details", "Details", new { name = @user.Name }) |
+                @Html.ActionLink("Edit", "Edit", new { name = @user.Name })
+            </td>
+        </tr>
+    }
+    @if (this.Model == null || this.Model.Count == 0)
+    {
+        <tr>
+            <td colspan="8">No Results!</td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,8 @@
+﻿欢迎， @if (Request.IsAuthenticated)
+    { 
+    @Context.User.Identity.Name @:[ @Html.ActionLink("退出", "LogOut", "Account") ]
+    }
+    else
+    {
+        @Html.ActionLink("请登录", "LogOn", "Account", new { area = "" }, null)
+    }
